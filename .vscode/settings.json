@@ -4,12 +4,14 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
+  "tailwindCSS.experimental.configFile": ".nuxt/tailwind.config.cjs",
   "files.associations": {
     "*.css": "tailwindcss"
   },
   "editor.quickSuggestions": {
     "strings": true
   },
+  "editor.rulers": [80],
   "css.lint.unknownAtRules": "ignore",
   "scss.lint.unknownAtRules": "ignore"
 }
