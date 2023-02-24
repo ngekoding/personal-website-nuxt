@@ -1,6 +1,7 @@
 {
+  "prettier.enable": false,
+  "editor.formatOnSave": false,
   "editor.codeActionsOnSave": {
-    "source.fixAll": false,
     "source.fixAll.eslint": true
   },
   "files.associations": {
@@ -8,5 +9,7 @@
   },
   "editor.quickSuggestions": {
     "strings": true
-  }
+  },
+  "css.lint.unknownAtRules": "ignore",
+  "scss.lint.unknownAtRules": "ignore"
 }
