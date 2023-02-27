@@ -1,4 +1,6 @@
 {
+  "name": "personal-website-nuxt",
+  "description": "My personal website built with Nuxt.js",
   "private": true,
   "scripts": {
     "build": "nuxt build",
