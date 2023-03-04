@@ -24,12 +24,29 @@ const navLinks = ref([
   { url: '#work', text: 'Work' },
   { url: '#contact', text: 'Contact' },
 ])
+
+const hideNavbar = ref<boolean>(false)
+const el = ref<Document | null>(null)
+const scroll = useScroll(el)
+
+onMounted(() => el.value = document)
+
+watchEffect(() => {
+  if (scroll.isScrolling && scroll.directions.bottom && scroll.y.value > 64)
+    hideNavbar.value = true
+
+  else if (scroll.isScrolling && scroll.directions.top)
+    hideNavbar.value = false
+})
 </script>
 
 <template>
   <div>
-    <header class="fixed w-full top-0 z-30 h-16 flex items-center bg-white/75 backdrop-blur-md">
-      <div class="container mx-auto px-8 lg:px-12 flex items-center justify-between">
+    <header
+      class="fixed w-full top-0 z-30 h-16 flex items-center bg-white/75 backdrop-blur-md transition-transform duration-300"
+      :class="{ '-translate-y-16': hideNavbar }"
+    >
+      <div class="container mx-auto px-8 lg:px-28 flex items-center justify-between">
         <NuxtLink to="/">
           <img src="@/assets/img/logo.png" class="h-9 rounded-md">
         </NuxtLink>

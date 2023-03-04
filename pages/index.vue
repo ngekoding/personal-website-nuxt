@@ -55,7 +55,7 @@ const experienceTechnologies = {
   ],
 }
 
-const recommendationLang = ref('id')
+const recommendationLang = ref('en')
 const recommendation = reactive({
   id: 'Nur Muhammad menjadi tulang punggung utama suksesnya transformasi digital yang sudah dilakukan Fakultas Teknik sejak 2018. Kontribusi Nur Muhammad dalam implementasi berbagai layanan digital sangat besar, sehingga Fakultas Teknik UGM berhasil memperoleh predikat WBK dari Menteri PANRB tahun 2021, yang merupakan 1 dari 6 Fakultas di lingkungan KemenDikBudRistek, dari belasan ribu Fakultas di Indonesia.',
   en: 'Nur Muhammad is the main backbone of the successful digital transformation that has been carried out by the Faculty of Engineering since 2018. Nur Muhammad\'s contribution to the implementation of various digital services is very large, so that the Faculty of Engineering UGM has succeeded in obtaining the WBK title from the Minister of PANRB in 2021, which is 1 of 6 Faculties within the Ministry of Education, Culture and Research, out of tens of thousands of Faculties in Indonesia.',
@@ -67,10 +67,11 @@ const displayedRecommendation = computed<string>(() => {
 
 <template>
   <div id="landing-page">
-    <main class="container mx-auto px-8 lg:px-12">
+    <main class="container mx-auto px-8 lg:px-28">
       <section id="hero" class="min-h-screen pt-16 flex flex-col justify-center">
-        <p class="font-mono">
-          Hi, my name is
+        <p class="flex items-center font-mono">
+          <span class="inline-block w-1 h-1 bg-purple-500 rounded-full" />
+          <span class="ml-2">Hi, my name is</span>
         </p>
         <h1 class="big-heading text-purple-500">
           Nur Muhammad.
@@ -86,7 +87,7 @@ const displayedRecommendation = computed<string>(() => {
         <h2 class="text-2xl font-semibold text-purple-500">
           About Me
         </h2>
-        <div class="mt-4 flex flex-col md:flex-row gap-5 md:gap-10">
+        <div class="mt-4 flex flex-col md:flex-row gap-5 md:gap-14">
           <div class="flex-1 order-last md:order-first">
             <p class="mb-4">
               Hello! I'm Nur Muhammad, and I'm passionate about creating
@@ -131,7 +132,7 @@ const displayedRecommendation = computed<string>(() => {
           Experience
         </h2>
         <div class="max-w-2xl mx-auto mt-8">
-          <HeadlessDisclosure v-slot="{ open }">
+          <HeadlessDisclosure v-slot="{ open }" :default-open="true">
             <HeadlessDisclosureButton
               class="w-full text-white flex items-center py-2 px-4 rounded-lg"
               :class="[open ? 'bg-purple-500' : 'bg-purple-700']"
@@ -261,7 +262,7 @@ const displayedRecommendation = computed<string>(() => {
       </section>
     </main>
     <footer id="contact" class="scroll-mt-20 mt-20 bg-purple-50">
-      <div class="container mx-auto px-8 lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-6">
+      <div class="container mx-auto px-8 lg:px-28 grid grid-cols-1 lg:grid-cols-2 gap-6">
         <div class="py-8 flex flex-col justify-center">
           <div class="max-w-lg">
             <h3 class="font-medium text-4xl">
@@ -295,7 +296,7 @@ const displayedRecommendation = computed<string>(() => {
             class="absolute top-6 left-6 text-white/70"
           />
           <img src="@/assets/img/selo.jpeg" class="w-[150px] rounded-full mx-auto border-2 border-white">
-          <p class="mt-6 font-light">
+          <p class="mt-6">
             {{ displayedRecommendation }}
           </p>
           <div v-if="recommendationLang !== 'id'" class="text-xs italic mt-4">
