@@ -18,8 +18,13 @@ export default defineNuxtConfig({
   typescript: {
     shim: false,
   },
+  extends: [
+    // '@nuxt-themes/typography',
+  ],
   modules: [
+    '@nuxt/content',
     '@nuxtjs/tailwindcss',
+    '@vueuse/nuxt',
     'nuxt-icon',
     'nuxt-headlessui',
   ],

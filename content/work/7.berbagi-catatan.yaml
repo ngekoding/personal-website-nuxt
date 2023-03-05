@@ -1,0 +1,16 @@
+title: Berbagi Catatan
+description: Convert text notes to image for easy sharing
+url: https://ngekoding.github.io/notes-to-image
+category: Personal Project
+technologies:
+  - Progressive Web App
+  - Vue.js
+  - Tiptap
+  - Sass
+thumbnail: /img/works/berbagi-catatan/thumbnail.png
+screenshots:
+  - /img/works/berbagi-catatan/screenshot.png
+content: |-
+  Berbagi Catatan is a tool to convert text notes into beautiful images. Users can then download and share them easily.
+
+  The original idea of this app was for sharing islamic lecture notes, which has been enhanced with better support for Arabic writing and several other writing styles for easy reading. In addition, the resulting images can be organized into multiple images, so that long text notes can still be presented well and easy to read.

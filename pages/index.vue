@@ -55,6 +55,10 @@ const experienceTechnologies = {
   ],
 }
 
+const works = await queryContent('work')
+  .only(['_path', 'title', 'category', 'thumbnail'])
+  .find()
+
 const recommendationLang = ref('en')
 const recommendation = reactive({
   id: 'Nur Muhammad menjadi tulang punggung utama suksesnya transformasi digital yang sudah dilakukan Fakultas Teknik sejak 2018. Kontribusi Nur Muhammad dalam implementasi berbagai layanan digital sangat besar, sehingga Fakultas Teknik UGM berhasil memperoleh predikat WBK dari Menteri PANRB tahun 2021, yang merupakan 1 dari 6 Fakultas di lingkungan KemenDikBudRistek, dari belasan ribu Fakultas di Indonesia.',
@@ -214,50 +218,26 @@ const displayedRecommendation = computed<string>(() => {
           and cost-effective applications to boost organizational efficiency and
           productivity.
         </p>
-        <div class="mt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-4">
-          <div class="p-3 rounded-[32px] hover:shadow-xl">
-            <img src="/dummy-work-thumbnail.jpg" class="aspect-video object-cover rounded-3xl">
-            <div class="px-3 mt-3 mb-2">
-              <h4 class="text-xl font-medium">
-                Project 1
-              </h4>
-              <NuxtLink href="#" class="text-gray-700 hover:text-purple-500">
-                Show project
-              </NuxtLink>
+        <div class="mt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-2 gap-y-4">
+          <NuxtLink
+            v-for="work in works"
+            :key="work.title"
+            :to="work._path"
+            class="rounded-3xl xl:rounded-[32px] md:p-2.5 md:hover:shadow-xl group"
+          >
+            <div class="relative rounded-2xl xl:rounded-3xl overflow-hidden">
+              <div class="invisible md:visible absolute bg-purple-500 opacity-40 w-full h-full z-10 transition ease-in-out group-hover:opacity-0" />
+              <img :src="work.thumbnail" class="aspect-video object-cover transition ease-in-out duration-200 md:grayscale group-hover:grayscale-0">
             </div>
-          </div>
-          <div class="p-3 rounded-[32px] hover:shadow-xl">
-            <img src="/dummy-work-thumbnail.jpg" class="aspect-video object-cover rounded-3xl">
             <div class="px-3 mt-3 mb-2">
-              <h4 class="text-xl font-medium">
-                Project 2
+              <h4 class="text-lg font-medium line-clamp-1">
+                {{ work.title }}
               </h4>
-              <NuxtLink href="#" class="text-gray-700 hover:text-purple-500">
-                Show project
-              </NuxtLink>
+              <div>
+                {{ work.category }}
+              </div>
             </div>
-          </div>
-          <div class="p-3 rounded-[32px] hover:shadow-xl">
-            <img src="/dummy-work-thumbnail.jpg" class="aspect-video object-cover rounded-3xl">
-            <div class="px-3 mt-3 mb-2">
-              <h4 class="text-xl font-medium">
-                Project 3
-              </h4>
-              <NuxtLink href="#" class="text-gray-700 hover:text-purple-500">
-                Show project
-              </NuxtLink>
-            </div>
-          </div>
-        </div>
-        <div class="flex justify-center mt-6">
-          <button class="pl-6 pr-5 py-2 border border-purple-500 text-purple-500 rounded-lg group">
-            Show More
-            <Icon
-              name="material-symbols:arrow-right-alt"
-              size="20px"
-              class="ml-2 group-hover:translate-x-0.5"
-            />
-          </button>
+          </NuxtLink>
         </div>
       </section>
     </main>
