@@ -64,7 +64,7 @@ watchEffect(() => {
               <NuxtLink
                 to="/cv-nur-muhammad.pdf"
                 target="_blank"
-                class="inline-block bg-purple-500 text-white px-4 py-2 ml-2 rounded-lg"
+                class="inline-block border border-purple-500 text-purple-500 px-4 py-2 ml-2 rounded-lg"
               >
                 Resume
               </NuxtLink>
@@ -79,7 +79,7 @@ watchEffect(() => {
     <nav id="mobile-nav" class="md:hidden">
       <div
         v-if="mobileNav"
-        class="fixed h-screen dura w-screen bg-black/50 backdrop-blur-sm z-40"
+        class="fixed h-screen w-screen bg-black/50 backdrop-blur-sm z-40"
         @click="mobileNav = false"
       />
       <transition
@@ -90,11 +90,11 @@ watchEffect(() => {
         leave-from-class="transform translate-x-0"
         leave-to-class="transform translate-x-full"
       >
-        <div v-if="mobileNav" class="fixed h-screen w-10/12 right-0 bg-white p-6 z-50">
+        <div v-if="mobileNav" class="fixed h-full w-10/12 right-0 bg-white p-6 z-50">
           <button class="absolute right-8 rounded-full" @click="mobileNav = false">
             <Icon name="material-symbols:close" class="text-purple-500 text-2xl" />
           </button>
-          <ul class="h-full w-full flex flex-col items-center justify-center">
+          <ul class="h-full overflow-y-auto w-full flex flex-col items-center tall:justify-center">
             <li v-for="item in navLinks" :key="item.url">
               <NuxtLink
                 class="inline-block py-4 hover:text-purple-500 text-2xl"
@@ -107,7 +107,7 @@ watchEffect(() => {
               <NuxtLink
                 href="/cv-nur-muhammad.pdf"
                 target="_blank"
-                class="inline-block bg-purple-500 text-white text-lg px-8 py-2 rounded-lg"
+                class="inline-block border border-purple-500 text-purple-500 text-lg px-8 py-2 rounded-lg"
               >
                 Resume
               </NuxtLink>
