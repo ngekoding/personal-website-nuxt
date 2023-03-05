@@ -269,11 +269,10 @@ const displayedRecommendation = computed<string>(() => {
             </ul>
           </div>
         </div>
-        <div class="relative bg-purple-500 text-white p-10 text-center rounded-t-3xl lg:rounded-none">
+        <div class="relative bg-purple-500 text-white p-6 md:p-10 text-center rounded-t-3xl lg:rounded-none">
           <Icon
             name="bx:bxs-quote-alt-right"
-            size="70px"
-            class="absolute top-6 left-6 text-white/70"
+            class="absolute top-6 left-6 text-white/70 text-[50px] md:text-[70px]"
           />
           <img src="@/assets/img/selo.jpeg" class="w-[150px] rounded-full mx-auto border-2 border-white">
           <p class="mt-6">
