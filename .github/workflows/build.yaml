@@ -27,5 +27,5 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: master
-          repository-name: ngekoding.github.io
+          repository-name: ngekoding/ngekoding.github.io
           folder: .output/public
