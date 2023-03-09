@@ -223,12 +223,9 @@ const displayedRecommendation = computed<string>(() => {
             v-for="work in works"
             :key="work.title"
             :to="work._path"
-            class="rounded-3xl xl:rounded-[32px] md:p-2.5 md:hover:shadow-xl group"
+            class="rounded-3xl xl:rounded-[32px] md:p-2.5 hover:shadow-[0_0_56px_rgba(54,54,86,0.12)] transition duration-300"
           >
-            <div class="relative rounded-2xl xl:rounded-3xl overflow-hidden">
-              <div class="invisible md:visible absolute bg-purple-500 opacity-40 w-full h-full z-10 transition ease-in-out group-hover:opacity-0" />
-              <img :src="work.thumbnail" class="aspect-video object-cover transition ease-in-out duration-200 md:grayscale group-hover:grayscale-0">
-            </div>
+            <img :src="work.thumbnail" class="aspect-video object-cover rounded-2xl xl:rounded-3xl">
             <div class="px-3 mt-3 mb-2">
               <h4 class="text-lg font-medium line-clamp-1">
                 {{ work.title }}
