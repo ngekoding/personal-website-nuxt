@@ -75,7 +75,7 @@ const displayedRecommendation = computed<string>(() => {
       <section id="hero" class="min-h-screen pt-16 flex flex-col justify-center">
         <p class="flex items-center font-mono">
           <span class="inline-block w-1 h-1 bg-purple-500 rounded-full" />
-          <span class="ml-2">Hi, my name is</span>
+          <span class="ml-2 text-base lg:text-lg">Hi, my name is</span>
         </p>
         <h1 class="big-heading text-purple-500">
           Nur Muhammad.
@@ -83,7 +83,7 @@ const displayedRecommendation = computed<string>(() => {
         <h1 class="big-heading">
           I help simplify your lives.
         </h1>
-        <p class="mt-6 max-w-lg">
+        <p class="mt-6 max-w-xl text-base lg:max-w-lg lg:text-xl">
           I'm a full-stack developer, my experience in both front-end and back-end development allows me to build and maintain web applications with a deep understanding of the user experience. I enjoy solving complex problems and implementing innovative solutions.
         </p>
       </section>
