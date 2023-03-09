@@ -26,6 +26,7 @@ jobs:
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
+          github_token: ${{ secrets.DEPLOY_TOKEN }}
           branch: master
           repository-name: ngekoding/ngekoding.github.io
           folder: .output/public
