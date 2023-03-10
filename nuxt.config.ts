@@ -2,7 +2,6 @@
 export default defineNuxtConfig({
   app: {
     head: {
-      title: 'Nur Muhammad - Full Stack Developer',
       meta: [
         {
           name: 'keywords',
@@ -18,9 +17,6 @@ export default defineNuxtConfig({
   typescript: {
     shim: false,
   },
-  extends: [
-    // '@nuxt-themes/typography',
-  ],
   modules: [
     '@nuxt/content',
     '@nuxtjs/tailwindcss',
