@@ -21,9 +21,7 @@ const last = await queryContent('work')
 const prevWork = computed(() => prev ?? last[0])
 const nextWork = computed(() => next ?? first[0])
 
-useHead({
-  title: work?.value?.title,
-})
+useHead({ title: `${work?.title} Project` })
 </script>
 
 <template>

@@ -1,3 +1,7 @@
+<script lang="ts" setup>
+useHead({ title: 'Work' })
+</script>
+
 <template>
   <main class="container mx-auto px-8 pt-24 lg:px-28">
     <h1 class="text-5xl font-semibold">
