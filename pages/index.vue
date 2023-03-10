@@ -223,7 +223,7 @@ const displayedRecommendation = computed<string>(() => {
             v-for="work in works"
             :key="work.title"
             :to="work._path"
-            class="rounded-3xl xl:rounded-[32px] md:p-2.5 hover:shadow-[0_0_56px_rgba(54,54,86,0.12)] transition duration-300"
+            class="rounded-3xl xl:rounded-[32px] md:p-2.5 md:hover:shadow-[0_0_56px_rgba(54,54,86,0.12)] transition duration-300"
           >
             <img :src="work.thumbnail" class="aspect-video object-cover rounded-2xl xl:rounded-3xl">
             <div class="px-3 mt-3 mb-2">
