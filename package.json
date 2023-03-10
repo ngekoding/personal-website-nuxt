@@ -26,5 +26,8 @@
     "nuxt": "^3.2.2",
     "nuxt-headlessui": "^1.1.1",
     "nuxt-icon": "^0.3.2"
+  },
+  "dependencies": {
+    "vue-gtag": "^2.0.1"
   }
 }
