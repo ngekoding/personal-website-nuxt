@@ -27,7 +27,7 @@ useHead({
 </script>
 
 <template>
-  <main class="container mx-auto pt-28 pb-8 px-8 lg:px-28">
+  <main class="container mx-auto pt-24 lg:pt-28 pb-8 px-8 lg:px-28">
     <template v-if="!work">
       <p>The page you are looking for doesn't exists.</p>
       <NuxtLink to="/" class="block mt-4 font-mono text-sm text-purple-500 group">
@@ -37,10 +37,10 @@ useHead({
     <template v-else>
       <NuxtLink
         :to="{ path: '/', hash: '#work' }"
-        class="invisible lg:visible cursor-pointer fixed top-20 left-9 w-12 h-12 flex items-center justify-center bg-gray-50 hover:bg-purple-50 rounded-full group"
+        class="relative mb-7 w-10 h-10 md:w-11 md:h-11 lg:fixed lg:top-20 lg:left-9 lg:w-12 lg:h-12 flex items-center justify-center bg-gray-50 hover:bg-purple-50 rounded-full group"
       >
         <Icon name="material-symbols:arrow-back" />
-        <p class="absolute text-sm left-full pl-1.5 transition ease-in-out translate-x-5 opacity-0 group-hover:translate-x-0 group-hover:opacity-100">
+        <p class="absolute text-sm left-full pl-1.5 transition ease-in-out lg:translate-x-5 lg:opacity-0 lg:group-hover:translate-x-0 lg:group-hover:opacity-100">
           Back
         </p>
       </NuxtLink>
