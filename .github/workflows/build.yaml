@@ -30,3 +30,12 @@ jobs:
           branch: master
           repository-name: ngekoding/ngekoding.github.io
           folder: .output/public
+
+      - name: Deploy for nurmuhammad.my.id 📂
+        uses: SamKirkland/FTP-Deploy-Action@4.3.3
+        with:
+          server: ${{ secrets.DEPLOY_FTP_SERVER }}
+          username: ${{ secrets.DEPLOY_FTP_USERNAME }}
+          password: ${{ secrets.DEPLOY_FTP_PASSWORD }}
+          local-dir: .output/public
+          server-dir: public_html/
