@@ -84,11 +84,19 @@ useHead({ title: `${work?.title} Project` })
           :key="screenshot"
           class="border border-gray-100"
         >
-          <img :src="screenshot" class="w-full">
+          <img
+            :src="screenshot.url"
+            :alt="screenshot.alt"
+            class="w-full"
+          >
         </div>
       </div>
       <div class="w-full mt-6 lg:fixed lg:w-[270px] lg:bottom-9 lg:right-9 group">
-        <img :src="nextWork.thumbnail" class="hidden lg:block absolute -z-10 h-24 w-full object-cover rounded-t-lg bottom-full transition duration-300 ease-in-out translate-y-5 opacity-0 group-hover:translate-y-2 group-hover:opacity-100">
+        <img
+          :src="nextWork.thumbnail"
+          :alt="nextWork.title"
+          class="hidden lg:block absolute -z-10 h-24 w-full object-cover rounded-t-lg bottom-full transition duration-300 ease-in-out translate-y-5 opacity-0 group-hover:translate-y-2 group-hover:opacity-100"
+        >
         <div class="h-full bg-white rounded-lg py-5 lg:px-6">
           <div class="flex items-center justify-between">
             <h4 class="font-semibold">

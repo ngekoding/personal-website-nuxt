@@ -8,9 +8,12 @@ technologies:
   - Sass
 thumbnail: /img/works/belanja/thumbnail.png
 screenshots:
-  - /img/works/belanja/1.login-page.png
-  - /img/works/belanja/2.shopping.png
-  - /img/works/belanja/3.checkout.png
+  - url: /img/works/belanja/1.login-page.png
+    alt: Login Page
+  - url: /img/works/belanja/2.shopping.png
+    alt: Shopping or Choosing The Product
+  - url: /img/works/belanja/3.checkout.png
+    alt: Checkout
 content: |-
   Office stationery and housekeeping is a definite need by all departments in the Faculty of Engineering UGM, and it becomes a problem when the cost for operations (e.g. stamps) reaches a high number compared to the goods purchased, because stamps are needed for every purchase bill made.
 

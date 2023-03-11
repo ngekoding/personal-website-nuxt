@@ -11,11 +11,16 @@ technologies:
   - Telegram Bot
 thumbnail: /img/works/simadang/thumbnail.png
 screenshots:
-  - /img/works/simadang/1.login-page.png
-  - /img/works/simadang/2.invitation-type-options.png
-  - /img/works/simadang/3.invitation-form.png
-  - /img/works/simadang/4.invitation-result.png
-  - /img/works/simadang/5.food-ordering.png
+  - url: /img/works/simadang/1.login-page.png
+    alt: Login Page
+  - url: /img/works/simadang/2.invitation-type-options.png
+    alt: Invitation Type Options
+  - url: /img/works/simadang/3.invitation-form.png
+    alt: Create Invitation
+  - url: /img/works/simadang/4.invitation-result.png
+    alt: Invitation Result
+  - url: /img/works/simadang/5.food-ordering.png
+    alt: Food Ordering
 content: |-
   Sistem Administrasi Undangan (Simadang) is a service used to manage online invitations and everything related to the execution process in the form of sending invitations via email/telegram, confirming attendance, meeting notes, and ordering for consumption.
 

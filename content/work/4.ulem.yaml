@@ -9,10 +9,14 @@ technologies:
   - Sass
 thumbnail: /img/works/ulem/thumbnail.png
 screenshots:
-  - /img/works/ulem/1.login-page.png
-  - /img/works/ulem/2.form-request.png
-  - /img/works/ulem/3.my-assignment-letter.png
-  - /img/works/ulem/4.payment-report-summary.png
+  - url: /img/works/ulem/1.login-page.png
+    alt: Login Page
+  - url: /img/works/ulem/2.form-request.png
+    alt: Create Request
+  - url: /img/works/ulem/3.my-assignment-letter.png
+    alt: My Assignment Letter
+  - url: /img/works/ulem/4.payment-report-summary.png
+    alt: Payment Report Summary
 content: |-
   Layanan Uang Lembur (Ulem) is a service to manage the overtime activities up to the payment stage. 
 

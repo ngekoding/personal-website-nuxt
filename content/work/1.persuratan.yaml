@@ -10,11 +10,16 @@ technologies:
   - Sass
 thumbnail: /img/works/persuratan/thumbnail.png
 screenshots:
-  - /img/works/persuratan/1.login-page.png
-  - /img/works/persuratan/2.form-request.png
-  - /img/works/persuratan/3.form-request-by-template.png
-  - /img/works/persuratan/4.approval-detail-history.png
-  - /img/works/persuratan/5.qr-code-management.png
+  - url: /img/works/persuratan/1.login-page.png
+    alt: Login Page
+  - url: /img/works/persuratan/2.form-request.png
+    alt: Create Request
+  - url: /img/works/persuratan/3.form-request-by-template.png
+    alt: Create Request by Template
+  - url: /img/works/persuratan/4.approval-detail-history.png
+    alt: Detail Approval History
+  - url: /img/works/persuratan/5.qr-code-management.png
+    alt: Managing QR Code/Signature
 content: |-
   In easy terms, this service exists as a solution to speed up the document approval request process.
 

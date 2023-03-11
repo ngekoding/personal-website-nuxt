@@ -9,7 +9,8 @@ technologies:
   - Sass
 thumbnail: /img/works/berbagi-catatan/thumbnail.png
 screenshots:
-  - /img/works/berbagi-catatan/screenshot.png
+  - url: /img/works/berbagi-catatan/screenshot.png
+    alt: Editor and Result
 content: |-
   Berbagi Catatan is a tool to convert text notes into beautiful images. Users can then download and share them easily.
 

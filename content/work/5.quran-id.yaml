@@ -9,9 +9,12 @@ technologies:
   - Swiper.js
 thumbnail: /img/works/quran-id/thumbnail.png
 screenshots:
-  - /img/works/quran-id/1.surah-list-verse-pieces-search.png
-  - /img/works/quran-id/2.reading-mode-tajweed.png
-  - /img/works/quran-id/3.settings.png
+  - url: /img/works/quran-id/1.surah-list-verse-pieces-search.png
+    alt: Surah List and Search Verses by Chunk
+  - url: /img/works/quran-id/2.reading-mode-tajweed.png
+    alt: Reading and Tajweed Mode
+  - url: /img/works/quran-id/3.settings.png
+    alt: Settings
 content: |-
   Quran ID is a Quran application that comes with Indonesian translation. It is also equipped with a search feature based on chunks of verses, coloring of the Tajweed rules and audio recitation that can be played in various modes. In addition, verses and translations can be copied for any purpose. 
 

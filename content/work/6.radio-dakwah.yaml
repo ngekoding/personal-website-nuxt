@@ -8,6 +8,7 @@ technologies:
   - Sass
 thumbnail: /img/works/radio-dakwah/thumbnail.png
 screenshots:
-  - /img/works/radio-dakwah/screenshot.png
+  - url: /img/works/radio-dakwah/screenshot.png
+    alt: Listening and Available Radio Station
 content: |-
   Radio Dakwah is an online radio that focuses on da'wah radio stations and can be accessed easily through the user's browser. This way, a peaceful heart can be more easily obtained.
