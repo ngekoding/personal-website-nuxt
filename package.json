@@ -25,9 +25,12 @@
     "husky": "^8.0.0",
     "nuxt": "^3.2.2",
     "nuxt-headlessui": "^1.1.1",
-    "nuxt-icon": "^0.3.2"
+    "nuxt-icon": "^0.3.2",
+    "recursive-readdir": "^2.2.3",
+    "sharp": "^0.31.3"
   },
   "dependencies": {
-    "vue-gtag": "^2.0.1"
+    "vue-gtag": "^2.0.1",
+    "vue3-lazyload": "^0.3.6"
   }
 }

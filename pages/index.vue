@@ -226,9 +226,12 @@ const displayedRecommendation = computed<string>(() => {
             class="rounded-3xl xl:rounded-[32px] md:p-2.5 md:hover:shadow-[0_0_56px_rgba(54,54,86,0.12)] transition duration-300"
           >
             <img
-              :src="work.thumbnail"
+              v-lazy="{
+                src: work.thumbnail,
+                loading: getMinifiedImg(work.thumbnail),
+              }"
               :alt="work.title"
-              class="aspect-video object-cover rounded-2xl xl:rounded-3xl"
+              class="w-full aspect-video object-cover rounded-2xl xl:rounded-3xl"
             >
             <div class="px-3 mt-3 mb-2">
               <h4 class="text-lg font-medium line-clamp-1">
@@ -276,9 +279,10 @@ const displayedRecommendation = computed<string>(() => {
             class="absolute top-6 left-6 text-white/70 text-[50px] md:text-[70px]"
           />
           <img
+
             src="@/assets/img/selo.jpeg"
             alt="Selo"
-            class="w-[150px] rounded-full mx-auto border-2 border-white"
+            class="w-[150px] h-[150px] rounded-full mx-auto border-2 border-white"
           >
           <p class="mt-6">
             {{ displayedRecommendation }}

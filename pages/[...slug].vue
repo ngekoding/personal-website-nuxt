@@ -85,7 +85,10 @@ useHead({ title: `${work?.title} Project` })
           class="border border-gray-100"
         >
           <img
-            :src="screenshot.url"
+            v-lazy="{
+              src: screenshot.url,
+              loading: getMinifiedImg(screenshot.url),
+            }"
             :alt="screenshot.alt"
             class="w-full"
           >
