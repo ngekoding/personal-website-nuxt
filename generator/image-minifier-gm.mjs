@@ -1,7 +1,7 @@
 import path from 'path'
 import fs from 'fs'
+import gm from 'gm'
 import recursive from 'recursive-readdir'
-import sharp from 'sharp'
 
 function ignore(file, stats) {
   return (stats.isFile() && !file.endsWith('.png'))
@@ -20,12 +20,12 @@ function ignore(file, stats) {
     if (!fs.existsSync(destPath))
       fs.mkdirSync(destPath, { recursive: true })
 
-    const metadata = await sharp(file).metadata()
-
-    sharp(file)
+    gm.subClass({ imageMagick: '7+' })(file)
       .resize(3, 3)
-      .toFile(destFile)
-      .then(() => console.log(`${file} -> OK`))
-      .catch(e => console.log(`${file} -> ERR`, e))
+      .write(destFile, (e) => {
+        if (!e)
+          console.log(`${file} -> OK`)
+        else console.log(`${file} -> ERR`, e)
+      })
   }
 })()
