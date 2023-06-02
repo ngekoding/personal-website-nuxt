@@ -145,7 +145,7 @@ const displayedRecommendation = computed<string>(() => {
                 Full Stack Developer @ Fakultas Teknik UGM
               </div>
               <div class="hidden md:block">
-                2018 - 2022
+                2018 - Present
               </div>
               <Icon
                 :name="open ? 'material-symbols:remove' : 'material-symbols:add'"
@@ -163,10 +163,14 @@ const displayedRecommendation = computed<string>(() => {
             >
               <HeadlessDisclosurePanel class="bg-purple-50 p-4 rounded-lg mt-1 flex flex-col md:flex-row md:items-center gap-5">
                 <div class="flex-1 order-last md:order-first">
-                  <div class="text-gray-600 text-sm flex flex-col md:flex-row gap-1 md:gap-5">
-                    <div class="flex items-center gap-2 md:hidden">
+                  <div class="text-gray-600 text-sm flex flex-wrap flex-col md:flex-row gap-1 md:gap-x-5 md:gap-y-1">
+                    <div class="flex items-center gap-2">
                       <Icon name="material-symbols:date-range-outline" />
-                      <div>2018 - 2022</div>
+                      <div class="flex flex-wrap items-center gap-x-2">
+                        <div>2018 - 2022 (FT)</div>
+                        <Icon name="radix-icons:dot-filled" size="10" class="text-gray-400" />
+                        <div>April 2023 - Present (PT)</div>
+                      </div>
                     </div>
                     <div class="flex items-center gap-2">
                       <Icon name="material-symbols:location-on" />
