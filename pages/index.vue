@@ -15,6 +15,10 @@ const contactLinks = [
     text: 'LinkedIn',
   },
   {
+    url: 'https://youtube.com/@nrmuhammad',
+    text: 'YouTube',
+  },
+  {
     url: 'https://github.com/ngekoding',
     text: 'GitHub',
   },
