@@ -48,7 +48,7 @@ watchEffect(() => {
     >
       <div class="container mx-auto px-8 lg:px-28 flex items-center justify-between">
         <NuxtLink to="/">
-          <img src="@/assets/img/logo.png" class="h-9 rounded-md">
+          <img src="/img/logo.png" class="h-9 rounded-md">
         </NuxtLink>
         <nav id="main-nav" class="font-mono text-sm hidden md:block">
           <ul>

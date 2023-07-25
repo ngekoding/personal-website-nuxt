@@ -126,7 +126,7 @@ const displayedRecommendation = computed<string>(() => {
           <div class="md:basis-1/3 lg:basis-1/4 order-first md:order-last">
             <div class="sm:max-w-sm mx-auto overflow-hidden rounded-3xl border border-gray-300 shadow-xl">
               <img
-                src="@/assets/img/profile.png"
+                src="/img/profile.png"
                 alt="Profile"
                 class="object-cover"
               >
@@ -206,7 +206,7 @@ const displayedRecommendation = computed<string>(() => {
                 </div>
                 <div>
                   <img
-                    src="@/assets/img/logo-ugm.png"
+                    src="/img/logo-ugm.png"
                     alt="Logo UGM"
                     class="w-24"
                   >
@@ -288,7 +288,7 @@ const displayedRecommendation = computed<string>(() => {
           />
           <img
 
-            src="@/assets/img/selo.jpeg"
+            src="/img/selo.jpeg"
             alt="Selo"
             class="w-[150px] h-[150px] rounded-full mx-auto border-2 border-white"
           >
