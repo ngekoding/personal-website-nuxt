@@ -201,13 +201,14 @@ const displayedRecommendation = computed<string>(() => {
       <div class="container mx-auto px-8 lg:px-28 grid grid-cols-1 lg:grid-cols-2 gap-6">
         <div class="py-8 flex flex-col justify-center">
           <div class="max-w-lg">
-            <h3 class="font-medium text-4xl">
-              Available for select full-time or freelance opportunities
+            <h3 class="text-4xl font-bold text-purple-600">
+              Get in Touch!
             </h3>
-            <p class="text-lg mt-4">
-              Have an exciting project or beautiful idea you need to help
-              with?<br>
-              Send me an email or contact me via instant message!
+            <p class="mt-4">
+              Hey, it's wonderful to hear from you! Although I'm not actively
+              seeking new opportunities, my inbox is always open for you.
+              Don't hesitate to reach out if you have any questions or simply
+              want to say hi - I'll be more than happy to get back to you!
             </p>
             <NuxtLink to="mailto:about.nurmuhammad@gmail.com" class="inline-block font-bold text-lg md:text-xl lg:text-2xl my-10 border-b-2 border-dotted border-purple-300 hover:border-purple-500">
               about.nurmuhammad@gmail.com
