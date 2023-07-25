@@ -1,73 +1,17 @@
 <script lang="ts" setup>
+import contactLinks from '@/data/contact-links'
+import technologies from '@/data/technologies'
+import recommendation from '@/data/recommendation'
+
 definePageMeta({ name: 'home' })
 
-const contactLinks = [
-  {
-    url: 'https://m.me/about.nurmuhammad',
-    text: 'Messenger',
-  },
-  {
-    url: 'https://wa.me/6287864423038',
-    text: 'WhatsApp',
-  },
-  {
-    url: 'https://linkedin.com/in/nur-muhammad',
-    text: 'LinkedIn',
-  },
-  {
-    url: 'https://youtube.com/@nrmuhammad',
-    text: 'YouTube',
-  },
-  {
-    url: 'https://github.com/ngekoding',
-    text: 'GitHub',
-  },
-]
-
-const technologies = [
-  'HTML',
-  'CSS',
-  'JavaScript',
-  'Vue.js',
-  'Nuxt.js',
-  'Sass',
-  'Tailwind CSS',
-  'PHP',
-  'CodeIgniter',
-  'Yii2',
-  'Laravel/Lumen',
-  'Node.js',
-  'Express.js',
-  'Google Apps Script',
-  'MySQL',
-]
-
-const experienceTechnologies = {
-  ftugm: [
-    'HTML',
-    'CSS',
-    'JavaScript',
-    'Vue.js',
-    'Sass',
-    'PHP',
-    'CodeIgniter',
-    'Yii2',
-    'Laravel/Lumen',
-    'Node.js',
-    'Express.js',
-    'Google Apps Script',
-  ],
-}
+const experienceTechnologies = technologies.filter(tech => tech.usedIn.includes('ftugm'))
 
 const works = await queryContent('work')
   .only(['_path', 'title', 'category', 'thumbnail'])
   .find()
 
 const recommendationLang = ref('en')
-const recommendation = reactive({
-  id: 'Nur Muhammad menjadi tulang punggung utama suksesnya transformasi digital yang sudah dilakukan Fakultas Teknik sejak 2018. Kontribusi Nur Muhammad dalam implementasi berbagai layanan digital sangat besar, sehingga Fakultas Teknik UGM berhasil memperoleh predikat WBK dari Menteri PANRB tahun 2021, yang merupakan 1 dari 6 Fakultas di lingkungan KemenDikBudRistek, dari belasan ribu Fakultas di Indonesia.',
-  en: 'Nur Muhammad is the main backbone of the successful digital transformation that has been carried out by the Faculty of Engineering since 2018. Nur Muhammad\'s contribution to the implementation of various digital services is very large, so that the Faculty of Engineering UGM has succeeded in obtaining the WBK title from the Minister of PANRB in 2021, which is 1 of 6 Faculties within the Ministry of Education, Culture and Research, out of tens of thousands of Faculties in Indonesia.',
-})
 const displayedRecommendation = computed<string>(() => {
   return recommendationLang.value === 'id' ? recommendation.id : recommendation.en
 })
@@ -117,9 +61,9 @@ const displayedRecommendation = computed<string>(() => {
               Here are a few technologies I've been working with:
             </p>
             <ul class="font-mono text-sm grid grid-flow-col grid-rows-8 sm:grid-rows-5 auto-cols-max gap-y-2 gap-x-6">
-              <li v-for="item in technologies" :key="item">
+              <li v-for="(item, key) in technologies" :key="`technology-${key}`">
                 <Icon name="material-symbols:play-arrow-outline" class="text-purple-500" />
-                {{ item }}
+                {{ item.label }}
               </li>
             </ul>
           </div>
@@ -196,11 +140,11 @@ const displayedRecommendation = computed<string>(() => {
                   </p>
                   <div class="mt-4 font-mono text-xs text-white flex flex-wrap gap-x-1 gap-y-1">
                     <span
-                      v-for="item in experienceTechnologies.ftugm"
-                      :key="item"
+                      v-for="(item, key) in experienceTechnologies"
+                      :key="`ftugm-technology-${key}`"
                       class="inline-block bg-purple-400 py-1 px-3 rounded-full"
                     >
-                      {{ item }}
+                      {{ item.label }}
                     </span>
                   </div>
                 </div>
