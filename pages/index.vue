@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import contactLinks from '@/data/contact-links'
 import technologies from '@/data/technologies'
-import recommendation from '@/data/recommendation'
+import recommendations from '@/data/recommendations'
 
 definePageMeta({ name: 'home' })
 
@@ -10,11 +10,6 @@ const experienceTechnologies = technologies.filter(tech => tech.usedIn.includes(
 const works = await queryContent('work')
   .only(['_path', 'title', 'category', 'thumbnail'])
   .find()
-
-const recommendationLang = ref('en')
-const displayedRecommendation = computed<string>(() => {
-  return recommendationLang.value === 'id' ? recommendation.id : recommendation.en
-})
 </script>
 
 <template>
@@ -198,9 +193,9 @@ const displayedRecommendation = computed<string>(() => {
       </section>
     </main>
     <footer id="contact" class="scroll-mt-20 mt-20 bg-purple-50">
-      <div class="container mx-auto px-8 lg:px-28 grid grid-cols-1 lg:grid-cols-2 gap-6">
-        <div class="py-8 flex flex-col justify-center">
-          <div class="max-w-lg">
+      <div class="container mx-auto px-8 flex flex-col xl:flex-row lg:px-28">
+        <div class="flex-none order-2 xl:order-1 py-16 xl:py-20">
+          <div class="max-w-lg flex flex-col items-start lg:pr-8">
             <h3 class="text-4xl font-bold text-purple-600">
               Get in Touch!
             </h3>
@@ -226,38 +221,39 @@ const displayedRecommendation = computed<string>(() => {
             </ul>
           </div>
         </div>
-        <div class="relative bg-purple-500 text-white p-6 md:p-10 text-center rounded-t-3xl lg:rounded-none">
-          <Icon
-            name="bx:bxs-quote-alt-right"
-            class="absolute top-6 left-6 text-white/70 text-[50px] md:text-[70px]"
-          />
-          <img
-
-            src="/img/selo.jpeg"
-            alt="Selo"
-            class="w-[150px] h-[150px] rounded-full mx-auto border-2 border-white"
+        <div class="flex-1 order-1 -mt-5 xl:order-2 xl:-mt-0">
+          <div
+            v-for="(recommendation, key) in recommendations"
+            :key="`recommendation-${key}`"
+            class="text-white p-6 md:p-10 first:rounded-t-lg last:rounded-b-lg xl:first:rounded-t-none xl:last:rounded-b-none"
+            :class="recommendation.meta.class"
           >
-          <p class="mt-6">
-            {{ displayedRecommendation }}
-          </p>
-          <div v-if="recommendationLang !== 'id'" class="text-xs italic mt-4">
-            <span class="opacity-75">Translated from Indonesia.</span><br>
-            <button class="border-b border-dotted italic opacity-75 hover:opacity-100" @click="recommendationLang = 'id'">
-              View original.
-            </button>
-          </div>
-          <div v-else class="text-xs italic mt-4">
-            <span class="opacity-75">The original version in Indonesia.</span><br>
-            <button class="border-b border-dotted italic opacity-75 hover:opacity-100" @click="recommendationLang = 'en'">
-              View in English.
-            </button>
-          </div>
-          <div class="w-[24px] h-0.5 bg-white mx-auto my-6" />
-          <div class="mt-4 font-medium">
-            Prof. Ir. Selo, S.T., M.T., M.Sc., Ph.D., IPU, ASEAN Eng.
-          </div>
-          <div class="text-xs">
-            Dean of Faculty of Engineering, Universitas Gadjah Mada
+            <div class="flex flex-col text-center items-center gap-5 lg:flex-row lg:text-left">
+              <img
+                :src="recommendation.author.avatar"
+                :alt="recommendation.author.name"
+                class="w-[90px] h-[90px] lg:w-[70px] lg:h-[70px] rounded-full border-2 border-white"
+              >
+              <div>
+                <div class="font-medium leading-tight">
+                  {{ recommendation.author.name }}
+                </div>
+                <div class="mt-1 text-xs italic">
+                  {{ recommendation.author.position }}
+                </div>
+              </div>
+            </div>
+            <div class="flex-1 mt-6">
+              <div class="relative">
+                <Icon
+                  name="bx:bxs-quote-alt-right"
+                  class="absolute z-0 -top-3 -left-3 md:-left-5 text-black/20 text-[50px] rotate-180"
+                />
+                <p class="relative z-10">
+                  {{ recommendation.message }}
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
