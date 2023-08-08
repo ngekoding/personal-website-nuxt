@@ -2,6 +2,9 @@ import type { Config } from 'tailwindcss'
 import lineClamp from '@tailwindcss/line-clamp'
 
 export default <Partial<Config>>{
+  content: [
+    './data/**/*.ts'
+  ],
   theme: {
     extend: {
       gridTemplateRows: {
