@@ -110,9 +110,9 @@ const works = await queryContent('work')
                     <div class="flex items-center gap-2">
                       <Icon name="material-symbols:date-range-outline" />
                       <div class="flex flex-wrap items-center gap-x-2">
-                        <div>2018 - 2022 (FT)</div>
+                        <div>2018 - 2022, July 2023 - Present (FT)</div>
                         <Icon name="radix-icons:dot-filled" size="10" class="text-gray-400" />
-                        <div>April 2023 - Present (PT)</div>
+                        <div>April - June 2023 (PT)</div>
                       </div>
                     </div>
                     <div class="flex items-center gap-2">
