@@ -2,7 +2,8 @@ import type { Config } from 'tailwindcss'
 
 export default <Partial<Config>>{
   content: [
-    './data/**/*.ts'
+    './data/**/*.ts',
+    './locales/**/*.ts',
   ],
   theme: {
     extend: {
