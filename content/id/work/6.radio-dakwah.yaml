@@ -1,0 +1,14 @@
+title: Radio Dakwah
+description: Radio online khusus stasiun dakwah
+url: https://ngekoding.github.io/radio-dakwah
+category: Projek Pribadi
+technologies:
+  - Vue.js
+  - Howler.js
+  - Sass
+thumbnail: /img/works/radio-dakwah/thumbnail.png
+screenshots:
+  - url: /img/works/radio-dakwah/screenshot.png
+    alt: Mendengarkan dan Daftar Stasiun Radio
+content: |-
+  Radio Dakwah adalah radio online yang khusus memuat stasiun-stasiun radio dakwah dan dapat diakses dengan mudah melalui browser pengguna. Dengan demikian ketentraman hati dapat lebih mudah untuk didapatkan.

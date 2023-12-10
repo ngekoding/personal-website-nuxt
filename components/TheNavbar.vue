@@ -7,22 +7,13 @@ useHead({
   },
 })
 
-const router = useRouter()
-const route = useRoute()
-
-const toLandingSection = (hash: string): void => {
-  mobileNav.value = false
-  router.replace({
-    hash,
-    name: route.name !== 'home' ? 'home' : undefined,
-  })
-}
+const localePath = useLocalePath()
 
 const navLinks = ref([
-  { url: '#about', text: 'About' },
-  { url: '#experience', text: 'Experience' },
-  { url: '#work', text: 'Work' },
-  { url: '#contact', text: 'Contact' },
+  { hash: '#about', text: 'nav.about' },
+  { hash: '#experience', text: 'nav.experience' },
+  { hash: '#work', text: 'nav.work' },
+  { hash: '#contact', text: 'nav.contact' },
 ])
 
 const hideNavbar = ref<boolean>(false)
@@ -47,27 +38,30 @@ watchEffect(() => {
       :class="{ '-translate-y-16': hideNavbar }"
     >
       <div class="container mx-auto px-8 lg:px-28 flex items-center justify-between">
-        <NuxtLink to="/">
+        <NuxtLink :to="localePath('/')">
           <img src="/img/logo.png" class="h-9 rounded-md">
         </NuxtLink>
         <nav id="main-nav" class="font-mono text-sm hidden md:block">
           <ul>
-            <li v-for="item in navLinks" :key="item.url" class="inline">
+            <li v-for="item in navLinks" :key="item.hash" class="inline">
               <NuxtLink
                 class="cursor-pointer inline-block px-4 py-2 hover:text-purple-500"
-                @click="toLandingSection(item.url)"
+                :to="{ path: localePath('/'), hash: item.hash }"
               >
-                {{ item.text }}
+                {{ $t(item.text) }}
               </NuxtLink>
             </li>
-            <li class="inline">
+            <li class="inline no-numbering">
               <NuxtLink
                 to="/cv-nur-muhammad.pdf"
                 target="_blank"
                 class="inline-block border border-purple-500 text-purple-500 px-4 py-2 ml-2 rounded-lg"
               >
-                Resume
+                {{ $t('nav.resume') }}
               </NuxtLink>
+            </li>
+            <li class="inline no-numbering pl-4">
+              <LocaleSwitcher />
             </li>
           </ul>
         </nav>
@@ -95,22 +89,25 @@ watchEffect(() => {
             <Icon name="material-symbols:close" class="text-purple-500 text-2xl" />
           </button>
           <ul class="h-full overflow-y-auto w-full flex flex-col items-center tall:justify-center">
-            <li v-for="item in navLinks" :key="item.url">
+            <li v-for="item in navLinks" :key="item.hash">
               <NuxtLink
                 class="inline-block py-4 hover:text-purple-500 text-2xl"
-                @click="toLandingSection(item.url)"
+                :to="{ path: localePath('/'), hash: item.hash }"
               >
-                {{ item.text }}
+                {{ $t(item.text) }}
               </NuxtLink>
             </li>
-            <li class="mt-10">
+            <li class="mt-10 no-numbering">
               <NuxtLink
                 href="/cv-nur-muhammad.pdf"
                 target="_blank"
                 class="inline-block border border-purple-500 text-purple-500 text-lg px-8 py-2 rounded-lg"
               >
-                Resume
+                {{ $t('nav.resume') }}
               </NuxtLink>
+            </li>
+            <li class="mt-10 no-numbering">
+              <LocaleSwitcher is-mobile />
             </li>
           </ul>
         </div>
@@ -125,7 +122,7 @@ watchEffect(() => {
   counter-reset: item 0;
   li {
     counter-increment: item;
-    &:not(:last-child) a::before {
+    &:not(.no-numbering) a::before {
       content: "0" counter(item) ".";
       @apply text-purple-500 mr-2;
     }
@@ -133,7 +130,7 @@ watchEffect(() => {
 }
 #mobile-nav {
   li {
-    &:not(:last-child) a::before {
+    &:not(.no-numbering) a::before {
       @apply block text-center text-base mr-0;
     }
   }

@@ -21,8 +21,10 @@ export default defineNuxtConfig({
     '@nuxt/content',
     '@nuxtjs/tailwindcss',
     '@vueuse/nuxt',
+    '@nuxtjs/i18n',
     'nuxt-icon',
     'nuxt-headlessui',
+    '@nuxt/image',
   ],
   tailwindcss: {
     cssPath: '@/assets/css/main.css',
@@ -32,5 +34,30 @@ export default defineNuxtConfig({
       'tailwindcss/nesting': {},
       'tailwindcss': {},
     },
+  },
+  content: {
+    locales: ['en', 'id'],
+    defaultLocale: 'en',
+  },
+  i18n: {
+    locales: [
+      {
+        code: 'en',
+        name: 'EN',
+        file: 'en.ts',
+        icon: 'flag:us-1x1',
+      },
+      {
+        code: 'id',
+        name: 'ID',
+        file: 'id.ts',
+        icon: 'flag:id-1x1',
+      },
+    ],
+    lazy: true,
+    langDir: 'locales',
+    defaultLocale: 'en',
+    strategy: 'prefix_except_default',
+    detectBrowserLanguage: false,
   },
 })

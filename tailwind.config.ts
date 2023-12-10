@@ -1,5 +1,4 @@
 import type { Config } from 'tailwindcss'
-import lineClamp from '@tailwindcss/line-clamp'
 
 export default <Partial<Config>>{
   content: [
@@ -16,7 +15,5 @@ export default <Partial<Config>>{
       },
     },
   },
-  plugins: [
-    lineClamp,
-  ],
+  plugins: [],
 }
