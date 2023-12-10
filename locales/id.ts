@@ -86,7 +86,7 @@ export default {
       message: 'Saya bertemu dengan Nur saat ia bekerja sebagai senior developer '
         + ' di Fakultas Teknik UGM. Saya bekerja sama dengannya secara langsung '
         + 'untuk mengembangkan berbagai sistem informasi yang membuat '
-        + 'perushaan kami lebih produktif. Nur memiliki komitmen yang tinggi '
+        + 'perusahaan kami lebih produktif. Nur memiliki komitmen yang tinggi '
         + 'terhadap hasil kerja, pengalamannya dengan PHP dan LAMP stack membuatnya '
         + 'sangat produktif dan memiliki kinerja yang baik. Terima kasih Nur, '
         + 'semoga dalam waktu dekat kita bisa bekerja sama di projek lain.',
