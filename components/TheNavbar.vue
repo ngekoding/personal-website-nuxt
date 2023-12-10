@@ -41,7 +41,7 @@ watchEffect(() => {
         <NuxtLink :to="localePath('/')">
           <img src="/img/logo.png" class="h-9 rounded-md">
         </NuxtLink>
-        <nav id="main-nav" class="font-mono text-sm hidden md:block">
+        <nav id="main-nav" class="text-sm hidden md:block">
           <ul>
             <li v-for="item in navLinks" :key="item.hash" class="inline">
               <NuxtLink

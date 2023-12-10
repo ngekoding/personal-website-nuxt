@@ -45,7 +45,7 @@ useHead({ title: pageTitle })
   <main class="container mx-auto pt-24 lg:pt-28 pb-8 px-8 lg:px-28">
     <template v-if="!work">
       <p>{{ $t('pageNotFound.message') }}</p>
-      <NuxtLink :to="localePath('/')" class="block mt-4 font-mono text-sm text-purple-500 group">
+      <NuxtLink :to="localePath('/')" class="block mt-4 text-sm text-purple-500 group">
         <Icon name="material-symbols:keyboard-backspace" size="18px" class="group-hover:-translate-x-0.5" /> {{ $t('goToHome') }}
       </NuxtLink>
     </template>
