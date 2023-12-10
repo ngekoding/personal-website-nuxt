@@ -22,9 +22,7 @@ Yes, you can fork this repo. Please give me proper credit by linking back to [ng
 
 ## Prerequisites
 
-- **Node.js** - [`v16.10.0`](https://nodejs.org/en/) or newer
-- **Text editor** - I recommend [Visual Studio Code](https://code.visualstudio.com/) with the [Volar Extension](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
-- **Terminal** - In order to run Nuxt commands
+The same as [Nuxt 3 Prerequisites](https://nuxt.com/docs/getting-started/installation#prerequisites).
 
 ## Installation
 
