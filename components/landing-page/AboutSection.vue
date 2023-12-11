@@ -4,11 +4,11 @@ import technologies from '@/data/technologies'
 
 <template>
   <section id="about" class="scroll-mt-20 pb-4 mt-20">
-    <h2 class="text-2xl font-semibold text-purple-500">
-      {{ $t('landing.about.title') }}
-    </h2>
-    <div class="mt-4 flex flex-col md:flex-row gap-5 md:gap-14">
-      <div class="flex-1 order-last md:order-first">
+    <div class="flex flex-col md:flex-row gap-5 md:gap-14">
+      <div class="flex-1 order-last md:order-first z-10">
+        <h2 class="text-2xl font-semibold text-purple-500 mb-4 -mt-[40px] md:mt-0">
+          {{ $t('landing.about.title') }}
+        </h2>
         <p v-html="nl2br($t('landing.about.description'))" />
         <p class="my-4">
           {{ $t('landing.about.usedTechnologiesTitle') }}
@@ -20,13 +20,14 @@ import technologies from '@/data/technologies'
           </li>
         </ul>
       </div>
-      <div class="md:basis-1/3 lg:basis-1/4 order-first md:order-last">
-        <div class="sm:max-w-sm mx-auto overflow-hidden rounded-3xl border border-gray-300 shadow-xl">
+      <div class="md:basis-1/2 lg:basis-1/3 order-first md:order-last">
+        <div class="sm:max-w-sm mx-auto relative">
           <img
             src="/img/profile.png"
             alt="Profile"
             class="object-cover"
           >
+          <div class="absolute -bottom-0.5 w-full h-[120px] bg-gradient-to-t from-white to-transparent" />
         </div>
       </div>
     </div>
