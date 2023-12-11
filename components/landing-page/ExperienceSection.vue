@@ -9,7 +9,7 @@ const experienceTechnologies = technologies.filter(tech => tech.usedIn.includes(
       class="leading-none text-[11vw] md:text-5xl lg:text-6xl font-semibold text-purple-500 text-center"
       v-html="nl2br($t('landing.experience.title'))"
     />
-    <div class="max-w-2xl mx-auto mt-8">
+    <div class="max-w-3xl mx-auto mt-8">
       <HeadlessDisclosure v-slot="{ open }" :default-open="true">
         <HeadlessDisclosureButton
           class="w-full text-white flex items-center py-2 px-4 rounded-lg"
@@ -37,15 +37,13 @@ const experienceTechnologies = technologies.filter(tech => tech.usedIn.includes(
         >
           <HeadlessDisclosurePanel class="bg-purple-50 p-4 rounded-lg mt-1 flex flex-col md:flex-row md:items-center gap-5">
             <div class="flex-1 order-last md:order-first">
-              <div class="text-gray-600 text-sm flex flex-wrap flex-col md:flex-row gap-1 md:gap-x-5 md:gap-y-1">
-                <div class="flex items-center gap-2">
-                  <Icon name="material-symbols:date-range-outline" />
-                  <div class="flex flex-wrap items-center gap-x-2">
-                    {{ $t('landing.experience.date') }}
-                  </div>
+              <div class="text-gray-600 text-sm flex flex-col gap-1">
+                <div class="flex items-start gap-2">
+                  <Icon name="material-symbols:date-range-outline" class="flex-shrink-0 mt-[3px]" />
+                  <div v-html="nl2br($t('landing.experience.date'))" />
                 </div>
                 <div class="flex items-center gap-2">
-                  <Icon name="material-symbols:location-on" />
+                  <Icon name="material-symbols:location-on" class="flex-shrink-0" />
                   <div>Yogyakarta, Indonesia</div>
                 </div>
                 <NuxtLink
@@ -53,7 +51,7 @@ const experienceTechnologies = technologies.filter(tech => tech.usedIn.includes(
                   target="_blank"
                   class="flex items-center gap-2"
                 >
-                  <Icon name="material-symbols:open-in-new" />
+                  <Icon name="material-symbols:open-in-new" class="flex-shrink-0" />
                   <div>ft.ugm.ac.id</div>
                 </NuxtLink>
               </div>
