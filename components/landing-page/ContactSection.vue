@@ -21,8 +21,9 @@ const recommendations: Recommendation[] = tm('recommendations') as Recommendatio
               <NuxtLink
                 :to="item.url"
                 target="_blank"
-                class="hover:text-purple-500"
+                class="flex items-center py-0.5 hover:text-purple-500"
               >
+                <Icon :name="item.icon" class="mr-3" />
                 {{ item.text }}
               </NuxtLink>
             </li>
