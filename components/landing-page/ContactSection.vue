@@ -30,11 +30,11 @@ const recommendations: Recommendation[] = tm('recommendations') as Recommendatio
           </ul>
         </div>
       </div>
-      <div class="flex-1 order-1 -mt-5 xl:order-2 xl:-mt-0">
+      <div class="flex-1 order-1 -mt-5 xl:order-2 xl:-mt-0 xl:flex xl:flex-col">
         <div
           v-for="(recommendation, key) in recommendations"
           :key="`recommendation-${key}`"
-          class="text-white p-6 md:p-10 first:rounded-t-lg last:rounded-b-lg xl:first:rounded-t-none xl:last:rounded-b-none"
+          class="text-white p-6 md:p-10 first:rounded-t-lg last:rounded-b-lg xl:first:rounded-t-none xl:last:rounded-b-none xl:flex-1 xl:flex xl:flex-col xl:justify-center"
           :class="rt(recommendation.meta.class)"
         >
           <div class="flex flex-col text-center items-center gap-5 lg:flex-row lg:text-left">
@@ -52,7 +52,7 @@ const recommendations: Recommendation[] = tm('recommendations') as Recommendatio
               </div>
             </div>
           </div>
-          <div class="flex-1 mt-6">
+          <div class="mt-6">
             <div class="relative">
               <Icon
                 name="bx:bxs-quote-alt-right"
